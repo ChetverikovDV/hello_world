@@ -1,0 +1,20 @@
+from tkinter import *
+
+clicks = 0
+window = Tk()
+
+def init_window():
+    window.title("GUI on Python")
+    window.geometry("300x250-0-0")
+
+    btn = Button(text = "Click Me", command = click_button_Click_Me)
+    btn.pack()
+    
+    window.mainloop()
+
+def click_button_Click_Me():
+    global clicks
+    clicks += 1
+    window.title("Clicks {}".format(clicks))
+
+init_window()    
